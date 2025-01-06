@@ -79,21 +79,21 @@
       rgba(0, 0, 0, 0)
     );
 
-    -webkit-mask-image: $linear;
-    mask-image: $linear;
-
-    animation: slide-in ease 0.5s;
+    // 原来的模糊遮罩层样式
+    // -webkit-mask-image: $linear;
+    // mask-image: $linear;
+    // animation: slide-in ease 0.5s;
 
     .mask-row {
       display: flex;
-      // justify-content: center;
-      margin-bottom: 10px;
+      justify-content: center;
+      margin: 20px;
 
-      @for $i from 1 to 10 {
-        &:nth-child(#{$i * 2}) {
-          margin-left: 50px;
-        }
-      }
+      // @for $i from 1 to 10 {
+      //   &:nth-child(#{$i * 2}) {
+      //     margin-left: 50px;
+      //   }
+      // }
 
       .mask {
         display: flex;
@@ -104,10 +104,10 @@
         background-color: var(--white);
         border-radius: 10px;
         margin-right: 10px;
-        max-width: 8em;
         transform: scale(1);
         cursor: pointer;
         transition: all ease 0.3s;
+        width: 90%;
 
         &:hover {
           transform: translateY(-5px) scale(1.1);

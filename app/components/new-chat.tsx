@@ -78,7 +78,10 @@ export function NewChat() {
   const chatStore = useChatStore();
   const maskStore = useMaskStore();
 
+  // 这个masks是内置和用户自定义的所有mask不重复列表
   const masks = maskStore.getAll();
+
+  // 给groups添加更多重复的mask
   const groups = useMaskGroup(masks);
 
   const navigate = useNavigate();
@@ -170,15 +173,9 @@ export function NewChat() {
       </div>
 
       <div className={styles["masks"]} ref={maskRef}>
-        {groups.map((masks, i) => (
-          <div key={i} className={styles["mask-row"]}>
-            {masks.map((mask, index) => (
-              <MaskItem
-                key={index}
-                mask={mask}
-                onClick={() => startChat(mask)}
-              />
-            ))}
+        {masks.map((mask, index) => (
+          <div key={index} className={styles["mask-row"]}>
+            <MaskItem key={index} mask={mask} onClick={() => startChat(mask)} />
           </div>
         ))}
       </div>
