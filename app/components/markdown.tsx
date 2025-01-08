@@ -218,6 +218,8 @@ function CustomCode(props: { children: any; className?: string }) {
         style={{
           maxHeight: enableCodeFold && collapsed ? "400px" : "none",
           overflowY: "hidden",
+          fontFamily: "JetBrains Mono",
+          fontSize: "12px",
         }}
       >
         {props.children}
