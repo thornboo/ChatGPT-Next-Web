@@ -535,6 +535,8 @@ const anthropicModels = [
   "claude-3-5-sonnet-20240620",
   "claude-3-5-sonnet-20241022",
   "claude-3-5-sonnet-latest",
+  "claude-3-7-sonnet-20250219",
+  "claude-3-7-sonnet-latest",
 ];
 
 const baiduModels = [
@@ -816,5 +818,5 @@ export const internalAllowedWebDavEndpoints = [
 
 export const DEFAULT_GA_ID = "G-89WN60ZK2E";
 
-export const SAAS_CHAT_URL = "https://nextchat.dev/chat";
-export const SAAS_CHAT_UTM_URL = "https://nextchat.dev/chat?utm=github";
+export const SAAS_CHAT_URL = "https://nextchat.club";
+export const SAAS_CHAT_UTM_URL = "https://nextchat.club?utm=github";
